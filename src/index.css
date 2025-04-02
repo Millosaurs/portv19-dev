@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tw-animate-css";
+@import "tailwindcss";
+
+@tailwind utilities;
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@import "tailwindcss";
+
+@theme {
+  /* Background Colors */
+  --color-background-main: #1a1a1a; /* Main dark background */
+  --color-background-primary: #252525; /* Slightly lighter sidebar background */
+  --color-background-card: #1e1e1e; /* Beige/peach for project cards */
+  --color-background-button: #333333; /* Dark gray for buttons */
+  --color-background-badge: #d3d3d3; /* Light gray for "Made in Framer" badge */
+
+  /* Text Colors */
+  --color-text-primary: #ffffff; /* White for primary text (e.g., headings) */
+  --color-text-secondary: #b0b0b0; /* Light gray for secondary text (e.g., subheadings) */
+  --color-text-accent-green: #34c759; /* Bright green for "ACCEPTING WORK" */
+  --color-text-accent-orange: #ff8c66; /* Orange for location text */
+  --color-text-dark: #505050; /* Dark gray for text in project cards */
+  --color-text-badge: #000000; /* Black for "Made in Framer" badge text */
+
+  /* Icon Colors */
+  --color-icon-primary: #ffffff; /* White for social media icons */
+  
+  /* Border Radius */
+  --rounded-sm: 0.125rem; /* 2px */
+  --rounded-md: 0.375rem; /* 6px */
+  --rounded-lg: 0.5rem;   /* 8px */
+  --rounded-xl: 0.75rem;  /* 12px */
+  --rounded-2xl: 1rem;    /* 16px */
+  --rounded-3xl: 1.5rem;  /* 24px */
+  --rounded-full: 9999px; /* Full rounded (circle) */
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
