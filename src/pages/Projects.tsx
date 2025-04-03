@@ -19,7 +19,7 @@ const ProjectCard = ({
         <img
           src={imageUrl}
           alt={title}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          className="w-fit h-full object-fit transition-transform duration-500 group-hover:scale-110"
           onError={(e) => {
             const target = e.target as HTMLImageElement;
             target.src = "/placeholder.svg"; // Fallback image
@@ -47,7 +47,9 @@ const ProjectCard = ({
         <div className="flex items-center justify-between mt-2 sm:mt-3 md:mt-4">
           <div className="flex items-center">
             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-background-card flex items-center justify-center mr-2 sm:mr-4">
-              <span className="text-sm sm:text-base text-white">{creator.charAt(0)}</span>
+              <span className="text-sm sm:text-base text-white">
+                {creator.charAt(0)}
+              </span>
             </div>
             <p className="text-sm sm:text-base text-gray-400">{creator}</p>
           </div>
