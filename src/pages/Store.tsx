@@ -37,7 +37,7 @@ const StoreItem = ({
           <span className="text-green-500 font-semibold">{price}</span>
         </div>
         <p className="text-sm text-gray-400 mb-3">{description}</p>
-        <Button className="w-full py-2 bg-background-card hover:bg-background-primary text-white rounded-xl flex items-center justify-center gap-2">
+        <Button className="w-full py-2 bg-background-card hover:bg-background-primary text-white rounded-2xl flex items-center justify-center gap-2">
           <span>View Details</span>
           <ArrowRightIcon size={14} />
         </Button>

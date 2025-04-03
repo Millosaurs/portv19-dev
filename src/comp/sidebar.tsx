@@ -31,12 +31,12 @@ const Sidebar = () => {
   // Mobile header
   const MobileHeader = () => (
     <header className="fixed top-0 left-0 right-0 h-16 bg-background-sidebar flex items-center justify-between px-4 z-50">
-      <button onClick={toggleSidebar} className="text-white p-2">
-        {isOpen ? <X size={24} /> : <Menu size={24} />}
-      </button>
       <div className="flex items-center">
         <text className="text-lg font-medium mr-4">Sharan Shrivatsav</text>
       </div>
+      <button onClick={toggleSidebar} className="text-white p-2">
+        {isOpen ? <X size={24} /> : <Menu size={24} />}
+      </button>
     </header>
   );
 
@@ -91,11 +91,11 @@ const Sidebar = () => {
             initial={{ x: "-100%" }}
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
-            transition={{ 
-              type: "spring", 
-              stiffness: 300, 
+            transition={{
+              type: "spring",
+              stiffness: 300,
               damping: 30,
-              when: "beforeChildren"
+              when: "beforeChildren",
             }}
           >
             <motion.div className="w-full">
