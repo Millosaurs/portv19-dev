@@ -77,25 +77,6 @@ const projectsData: Record<string, ProjectData> = {
     ],
     date: "December 2023",
   },
-  "mobile-ui": {
-    id: "mobile-ui",
-    title: "Mobile App UI",
-    description: "Modern UI components for mobile applications",
-    longDescription:
-      "This Mobile App UI kit provides a comprehensive collection of modern, customizable UI components designed specifically for mobile applications. The kit includes navigation elements, form components, cards, modals, and more, all optimized for mobile experiences.",
-    imageUrl: "/MobileUI/image.png",
-    technologies: ["React Native", "Styled Components", "TypeScript"],
-    liveUrl: "https://mobile-ui-kit.example.com",
-    githubUrl: "https://github.com/sharanshrivatsav/mobile-ui-kit",
-    features: [
-      "60+ customizable UI components",
-      "Responsive design for various screen sizes",
-      "Accessibility compliant elements",
-      "Dark and light theme support",
-      "Animation and transition libraries",
-    ],
-    date: "March 2024",
-  },
 };
 
 export default function ProjectDetail() {
@@ -104,8 +85,10 @@ export default function ProjectDetail() {
 
   if (!project) {
     return (
-      <div className="w-full text-center py-16">
-        <h1 className="text-3xl font-bold mb-4">Project Not Found</h1>
+      <div className="w-full text-center py-16 lg:px-96">
+        <h1 className="text-3xl font-bold mb-4 items-center">
+          Project Not Found
+        </h1>
         <p className="text-gray-400 mb-8">
           The project you're looking for doesn't exist or has been removed.
         </p>

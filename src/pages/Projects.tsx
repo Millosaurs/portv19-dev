@@ -71,36 +71,26 @@ const ProjectCard = ({
 export default function Projects() {
   const projects = [
     {
+      title: "Achievement Tracker",
+      imageUrl: "/ArcHide/image.png",
+      link: "/projects/act",
+    },
+    {
       title: "NoteBook-App",
       creator: "Sharan Shrivatsav",
       imageUrl: "/Orangy/image.png",
       link: "/projects/notebook-app",
     },
     {
-      title: "Achievement Tracker",
-      imageUrl: "/ArcHide/image.png",
-      link: "/projects/act",
-    },
-    {
       title: "E-commerce Dashboard",
       imageUrl: "/Dashboard/image.png",
       link: "/projects/dashboard",
-    },
-    {
-      title: "Mobile App UI",
-      imageUrl: "/MobileUI/image.png",
-      link: "/projects/mobile-ui",
-    },
-    {
-      title: "Mobile App UI (2)",
-      imageUrl: "/MobileUI/image.png",
-      link: "/projects/mobile-ui",
     },
   ];
 
   return (
     <div className="w-full">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 lg:pr-18">
         <div className="mb-6 md:mb-8">
           <div className="inline-flex items-center px-2 py-1 rounded-full bg-background-button/70 text-blue-500 text-xs mb-3 md:mb-4">
             <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>

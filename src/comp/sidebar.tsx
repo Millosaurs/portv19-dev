@@ -139,7 +139,6 @@ const Sidebar = () => {
           </Link>
         </li>
 
-        {/* Apply the same conditional styling to all other links */}
         <li className="w-full">
           <Link
             to="/projects"
@@ -152,7 +151,7 @@ const Sidebar = () => {
             <span>Projects</span>
           </Link>
         </li>
-        <li className="w-full">
+        {/* <li className="w-full">
           <Link
             to="/store"
             className={`font-medium flex items-center gap-3 px-3 p-2 hover:bg-background-primary/60 focus:bg-background-primary rounded-2xl w-full ${
@@ -163,7 +162,7 @@ const Sidebar = () => {
             <MdOutlineShoppingCart size={20} />
             <span>Store</span>
           </Link>
-        </li>
+        </li> */}
         <li className="w-full">
           <Link
             to="/contact"

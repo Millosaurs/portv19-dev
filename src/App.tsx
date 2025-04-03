@@ -1,7 +1,19 @@
 import Sidebar from "./comp/sidebar";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 const App = () => {
+  const { pathname } = useLocation();
+  
+  // Add scroll reset effect directly in App component
+  useEffect(() => {
+    const mainContent = document.querySelector('.overflow-y-auto');
+    if (mainContent) {
+      mainContent.scrollTop = 0;
+    }
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <main className="h-screen overflow-hidden">
       <div className="flex h-full">
