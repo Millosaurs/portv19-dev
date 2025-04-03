@@ -3,7 +3,7 @@ import "../index.css";
 import { BiHome } from "react-icons/bi";
 import { BsBriefcase } from "react-icons/bs";
 import { AiOutlineUser } from "react-icons/ai";
-import { MdOutlineEmail, MdOutlineShoppingCart } from "react-icons/md";
+import { MdOutlineEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
