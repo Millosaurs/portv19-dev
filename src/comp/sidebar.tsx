@@ -4,8 +4,9 @@ import { BiHome } from "react-icons/bi";
 import { BsBriefcase } from "react-icons/bs";
 import { AiOutlineUser } from "react-icons/ai";
 import { FiFileText } from "react-icons/fi";
-import { MdOutlineEmail } from "react-icons/md";
+import { MdOutlineEmail, MdOutlineShoppingCart } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { FaShoppingCart } from "react-icons/fa";
 
 const Sidebar = () => {
   return (
@@ -67,11 +68,11 @@ const Sidebar = () => {
             </li>
             <li className="w-full">
               <Link
-                to="/blog"
+                to="/store"
                 className="font-medium flex items-center gap-3 px-3 p-2 hover:bg-background-primary/60 focus:bg-background-primary rounded-2xl w-full"
               >
-                <FiFileText size={20} />
-                <span>Blog</span>
+                <MdOutlineShoppingCart size={20} />
+                <span>Store</span>
               </Link>
             </li>
             <li className="w-full">

@@ -79,13 +79,17 @@ export default function Projects() {
     <div className="w-full">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
+          <div className="inline-flex items-center px-2 py-1 rounded-full bg-background-button/70 text-blue-500 text-xs mb-4">
+            <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+            Featured Work
+          </div>
           <h1 className="text-4xl font-bold mb-2">Projects</h1>
           <p className="text-gray-400">
             Showcase of innovative design solutions
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 m-22 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 m-24">
           {projects.map((project, index) => (
             <ProjectCard
               key={index}

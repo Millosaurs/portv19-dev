@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <div className="w-full">
-      <div className="">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
           <div className="inline-flex items-center px-2 py-1 rounded-full bg-background-button/70 text-green-500 text-xs mb-4">
             <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
