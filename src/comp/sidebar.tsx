@@ -30,9 +30,11 @@ const Sidebar = () => {
 
   // Mobile header
   const MobileHeader = () => (
-    <header className="fixed top-0 left-0 right-0 h-16 bg-background-sidebar flex items-center justify-between px-4 z-50">
+    <header className="fixed top-0 left-0 right-0 h-16  flex items-center justify-between px-4 gap-y-4 z-50">
       <div className="flex items-center">
-        <text className="text-lg font-medium mr-4">Sharan Shrivatsav</text>
+        <Link to="/" className="text-lg font-medium mr-4">
+          Sharan Shrivatsav
+        </Link>
       </div>
       <button onClick={toggleSidebar} className="text-white p-2">
         {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -43,7 +45,7 @@ const Sidebar = () => {
   // Desktop sidebar
   const DesktopSidebar = () => (
     <aside className="h-screen w-[280px] min-w-[30vh] flex-shrink-0 hidden md:block transition-all duration-300 ease-in-out">
-      <nav className="h-full flex flex-col items-center bg-background-sidebar">
+      <nav className="h-full flex flex-col items-center ">
         <div className="p-4 pb-2 items-center w-full">
           <div className="flex flex-col items-center justify-center">
             <img
@@ -79,7 +81,7 @@ const Sidebar = () => {
       {isOpen && (
         <>
           <motion.div
-            className="fixed inset-0 z-40 bg-black bg-opacity-50"
+            className="fixed inset-0 z-40 bg-background-main "
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -87,7 +89,7 @@ const Sidebar = () => {
             onClick={toggleSidebar}
           />
           <motion.nav
-            className="fixed top-0 left-0 z-40 h-full w-64 bg-background-sidebar flex flex-col pt-20 shadow-lg"
+            className="fixed top-0 left-0 z-40 h-full w-full flex flex-col pt-20 px-4"
             initial={{ x: "-100%" }}
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
@@ -99,7 +101,7 @@ const Sidebar = () => {
             }}
           >
             <motion.div className="w-full">
-              <NavLinks onClick={toggleSidebar} />
+              <NavLinks onClick={toggleSidebar} isMobileSidebar={true} />
             </motion.div>
           </motion.nav>
         </>
@@ -108,13 +110,15 @@ const Sidebar = () => {
   );
 
   // Navigation links component
-  const NavLinks = ({ onClick = () => {} }) => (
+  const NavLinks = ({ onClick = () => {}, isMobileSidebar = false }) => (
     <div className="flex flex-col items-center justify-center w-full mt-4">
       <ul className="flex flex-col items-start justify-center w-full px-10 space-y-2">
         <li className="w-full">
           <Link
             to="/"
-            className="font-medium flex items-center gap-3 px-3 p-2 hover:bg-background-primary/60 focus:bg-background-primary rounded-2xl w-full transition-colors duration-200"
+            className={`font-medium flex items-center gap-3 px-3 p-2 hover:bg-background-primary/60 focus:bg-background-primary rounded-2xl w-full transition-colors duration-200 ${
+              isMobileSidebar ? "shadow-md bg-background-primary/20" : ""
+            }`}
             onClick={onClick}
           >
             <BiHome size={20} />
@@ -122,21 +126,26 @@ const Sidebar = () => {
           </Link>
         </li>
 
-        {/* Apply the same transition to all other links */}
         <li className="w-full">
           <Link
             to="/about"
-            className="font-medium flex items-center gap-3 px-3 p-2 hover:bg-background-primary/60 focus:bg-background-primary rounded-2xl w-full"
+            className={`font-medium flex items-center gap-3 px-3 p-2 hover:bg-background-primary/60 focus:bg-background-primary rounded-2xl w-full ${
+              isMobileSidebar ? "shadow-md bg-background-primary/20" : ""
+            }`}
             onClick={onClick}
           >
             <AiOutlineUser size={20} />
             <span>About</span>
           </Link>
         </li>
+
+        {/* Apply the same conditional styling to all other links */}
         <li className="w-full">
           <Link
             to="/projects"
-            className="font-medium flex items-center gap-3 px-3 p-2 hover:bg-background-primary/60 focus:bg-background-primary rounded-2xl w-full"
+            className={`font-medium flex items-center gap-3 px-3 p-2 hover:bg-background-primary/60 focus:bg-background-primary rounded-2xl w-full ${
+              isMobileSidebar ? "shadow-md bg-background-primary/20" : ""
+            }`}
             onClick={onClick}
           >
             <BsBriefcase size={20} />
@@ -146,7 +155,9 @@ const Sidebar = () => {
         <li className="w-full">
           <Link
             to="/store"
-            className="font-medium flex items-center gap-3 px-3 p-2 hover:bg-background-primary/60 focus:bg-background-primary rounded-2xl w-full"
+            className={`font-medium flex items-center gap-3 px-3 p-2 hover:bg-background-primary/60 focus:bg-background-primary rounded-2xl w-full ${
+              isMobileSidebar ? "shadow-md bg-background-primary/20" : ""
+            }`}
             onClick={onClick}
           >
             <MdOutlineShoppingCart size={20} />
@@ -156,7 +167,9 @@ const Sidebar = () => {
         <li className="w-full">
           <Link
             to="/contact"
-            className="font-medium flex items-center gap-3 px-3 p-2 hover:bg-background-primary/60 focus:bg-background-primary rounded-2xl w-full"
+            className={`font-medium flex items-center gap-3 px-3 p-2 hover:bg-background-primary/60 focus:bg-background-primary rounded-2xl w-full ${
+              isMobileSidebar ? "shadow-md bg-background-primary/20" : ""
+            }`}
             onClick={onClick}
           >
             <MdOutlineEmail size={20} />
