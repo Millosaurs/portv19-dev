@@ -36,7 +36,11 @@ const StoreItem = ({
           <h3 className="text-xl font-medium">{title}</h3>
           <span className="text-green-500 font-semibold">{price}</span>
         </div>
-        <p className="text-sm text-gray-400">{description}</p>
+        <p className="text-sm text-gray-400 mb-3">{description}</p>
+        <Button className="w-full py-2 bg-background-card hover:bg-background-primary text-white rounded-xl flex items-center justify-center gap-2">
+          <span>View Details</span>
+          <ArrowRightIcon size={14} />
+        </Button>
       </div>
     </div>
   );
