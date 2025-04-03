@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRightIcon } from "lucide-react";
 import "../index.css";
-import { Link } from "react-router-dom";
 import { FaLinkedin } from "react-icons/fa";
 import { SiFiverr, SiIndeed } from "react-icons/si";
 import { MdEmail, MdPlace } from "react-icons/md";
