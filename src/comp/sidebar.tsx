@@ -6,6 +6,7 @@ import { AiOutlineUser } from "react-icons/ai";
 import { MdOutlineEmail, MdOutlineShoppingCart } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,7 +42,7 @@ const Sidebar = () => {
 
   // Desktop sidebar
   const DesktopSidebar = () => (
-    <aside className="h-screen w-[280px] min-w-[30vh] flex-shrink-0 hidden md:block">
+    <aside className="h-screen w-[280px] min-w-[30vh] flex-shrink-0 hidden md:block transition-all duration-300 ease-in-out">
       <nav className="h-full flex flex-col items-center bg-background-sidebar">
         <div className="p-4 pb-2 items-center w-full">
           <div className="flex flex-col items-center justify-center">
@@ -72,21 +73,38 @@ const Sidebar = () => {
     </aside>
   );
 
-  // Mobile sidebar (slide-in)
+  // Mobile sidebar with motion animations
   const MobileSidebar = () => (
-    <div
-      className={`fixed inset-0 z-40 transform transition-transform duration-300 ease-in-out ${
-        isOpen ? "translate-x-0" : "-translate-x-full"
-      }`}
-    >
-      <div
-        className="bg-black bg-opacity-50 absolute inset-0"
-        onClick={toggleSidebar}
-      ></div>
-      <nav className="relative h-full w-64 bg-background-sidebar flex flex-col pt-20">
-        <NavLinks onClick={toggleSidebar} />
-      </nav>
-    </div>
+    <AnimatePresence mode="wait">
+      {isOpen && (
+        <>
+          <motion.div
+            className="fixed inset-0 z-40 bg-black bg-opacity-50"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            onClick={toggleSidebar}
+          />
+          <motion.nav
+            className="fixed top-0 left-0 z-40 h-full w-64 bg-background-sidebar flex flex-col pt-20 shadow-lg"
+            initial={{ x: "-100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "-100%" }}
+            transition={{ 
+              type: "spring", 
+              stiffness: 300, 
+              damping: 30,
+              when: "beforeChildren"
+            }}
+          >
+            <motion.div className="w-full">
+              <NavLinks onClick={toggleSidebar} />
+            </motion.div>
+          </motion.nav>
+        </>
+      )}
+    </AnimatePresence>
   );
 
   // Navigation links component
@@ -96,7 +114,7 @@ const Sidebar = () => {
         <li className="w-full">
           <Link
             to="/"
-            className="font-medium flex items-center gap-3 px-3 p-2 hover:bg-background-primary/60 focus:bg-background-primary rounded-2xl w-full"
+            className="font-medium flex items-center gap-3 px-3 p-2 hover:bg-background-primary/60 focus:bg-background-primary rounded-2xl w-full transition-colors duration-200"
             onClick={onClick}
           >
             <BiHome size={20} />
@@ -104,6 +122,7 @@ const Sidebar = () => {
           </Link>
         </li>
 
+        {/* Apply the same transition to all other links */}
         <li className="w-full">
           <Link
             to="/about"

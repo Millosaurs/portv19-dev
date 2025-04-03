@@ -15,11 +15,11 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   const content = (
     <div className="flex flex-col overflow-hidden transition-all duration-300 hover:scale-[1.01] group w-full">
-      <div className="h-[300px] sm:h-[400px] md:h-[500px] lg:h-[700px] overflow-hidden bg-background-card rounded-3xl relative">
+      <div className="h-[200px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden bg-background-card rounded-3xl relative w-[100%]">
         <img
           src={imageUrl}
           alt={title}
-          className="w-fit h-full object-fit transition-transform duration-500 group-hover:scale-110"
+          className="w-full h-full md:object-left object-cover transition-transform duration-500 group-hover:scale-110"
           onError={(e) => {
             const target = e.target as HTMLImageElement;
             target.src = "/placeholder.svg"; // Fallback image
@@ -122,6 +122,12 @@ export default function Projects() {
               link={project.link}
             />
           ))}
+        </div>
+      </div>
+      <div className="mt-16 md:mt-24 pt-6 mb-18 md:pt-8 border-t-2 border-background-card ">
+        <div className="flex flex-col md:flex-row justify-between items-center text-sm leading-2">
+          <div className="mb-4 md:mb-0">Sharan Shrivatsav · ©2024</div>
+          <div>Edited Times - 114</div>
         </div>
       </div>
     </div>

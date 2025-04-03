@@ -30,14 +30,18 @@ export default function About() {
             </div>
             <div className="mt-4 md:mt-6 space-y-3 md:space-y-4">
               <div>
-                <h3 className="text-base md:text-lg font-medium mb-1 md:mb-2">Location</h3>
+                <h3 className="text-base md:text-lg font-medium mb-1 md:mb-2">
+                  Location
+                </h3>
                 <div className="text-text-accent-orange/60 flex flex-row items-center">
                   <MdPlace className="text-lg md:text-xl mr-2" />
                   <span>Banglore, India</span>
                 </div>
               </div>
               <div>
-                <h3 className="text-base md:text-lg font-medium mb-1 md:mb-2">Education</h3>
+                <h3 className="text-base md:text-lg font-medium mb-1 md:mb-2">
+                  Education
+                </h3>
                 <p className="text-gray-300">Computer Science Major</p>
                 <p className="text-xs md:text-sm text-gray-400">First Year</p>
               </div>
@@ -46,7 +50,9 @@ export default function About() {
 
           <div className="md:col-span-2 space-y-6 md:space-y-8 mt-6 md:mt-0">
             <div>
-              <h2 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">Background</h2>
+              <h2 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">
+                Background
+              </h2>
               <p className="text-gray-300 mb-3 md:mb-4">
                 I'm a first-year Computer Science student with a passion for
                 creating intuitive and visually appealing digital experiences.
@@ -56,16 +62,20 @@ export default function About() {
               <p className="text-gray-300">
                 I believe in the power of technology to solve problems and
                 enhance lives. My goal is to combine technical skills with
-                creative thinking to build solutions that are both functional and
-                beautiful.
+                creative thinking to build solutions that are both functional
+                and beautiful.
               </p>
             </div>
 
             <div>
-              <h2 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">Skills & Expertise</h2>
+              <h2 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">
+                Skills & Expertise
+              </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
                 <div className="bg-background-card p-4 md:p-5 rounded-2xl">
-                  <h3 className="text-base md:text-lg font-medium mb-2 md:mb-3">Front-end Development</h3>
+                  <h3 className="text-base md:text-lg font-medium mb-2 md:mb-3">
+                    Front-end Development
+                  </h3>
                   <ul className="space-y-1 text-sm md:text-base text-gray-300">
                     <li>HTML, CSS, JavaScript</li>
                     <li>React.js, Next.js</li>
@@ -74,7 +84,9 @@ export default function About() {
                   </ul>
                 </div>
                 <div className="bg-background-card p-4 md:p-5 rounded-2xl">
-                  <h3 className="text-base md:text-lg font-medium mb-2 md:mb-3">Design</h3>
+                  <h3 className="text-base md:text-lg font-medium mb-2 md:mb-3">
+                    Design
+                  </h3>
                   <ul className="space-y-1 text-sm md:text-base text-gray-300">
                     <li>UI/UX Design</li>
                     <li>Figma, Adobe XD</li>
@@ -83,7 +95,9 @@ export default function About() {
                   </ul>
                 </div>
                 <div className="bg-background-card p-4 md:p-5 rounded-2xl">
-                  <h3 className="text-base md:text-lg font-medium mb-2 md:mb-3">Other Skills</h3>
+                  <h3 className="text-base md:text-lg font-medium mb-2 md:mb-3">
+                    Other Skills
+                  </h3>
                   <ul className="space-y-1 text-sm md:text-base text-gray-300">
                     <li>Git & Version Control</li>
                     <li>Problem Solving</li>
@@ -92,7 +106,9 @@ export default function About() {
                   </ul>
                 </div>
                 <div className="bg-background-card p-4 md:p-5 rounded-2xl">
-                  <h3 className="text-base md:text-lg font-medium mb-2 md:mb-3">Learning</h3>
+                  <h3 className="text-base md:text-lg font-medium mb-2 md:mb-3">
+                    Learning
+                  </h3>
                   <ul className="space-y-1 text-sm md:text-base text-gray-300">
                     <li>TypeScript</li>
                     <li>Node.js & Express</li>
@@ -104,7 +120,9 @@ export default function About() {
             </div>
 
             <div>
-              <h2 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">Interests</h2>
+              <h2 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">
+                Interests
+              </h2>
               <p className="text-gray-300 mb-4">
                 Beyond coding and design, I enjoy exploring new technologies,
                 reading about tech trends, and contributing to open-source
@@ -135,6 +153,12 @@ export default function About() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="mt-16 md:mt-24 pt-6 mb-18 md:pt-8 border-t-2 border-background-card ">
+        <div className="flex flex-col md:flex-row justify-between items-center text-sm leading-2">
+          <div className="mb-4 md:mb-0">Sharan Shrivatsav · ©2024</div>
+          <div>Edited Times - 114</div>
         </div>
       </div>
     </div>
