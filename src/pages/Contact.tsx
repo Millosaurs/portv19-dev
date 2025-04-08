@@ -1,11 +1,73 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRightIcon } from "lucide-react";
+import { ArrowRightIcon, CheckCircle, AlertCircle } from "lucide-react";
 import "../index.css";
 import { FaLinkedin } from "react-icons/fa";
 import { SiFiverr, SiIndeed } from "react-icons/si";
 import { MdEmail, MdPlace } from "react-icons/md";
+import { useState, useEffect } from "react";
+import { useForm } from "react-hook-form";
+import useWeb3Forms from "@web3forms/react";
+
+// Define form data type
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
 
 export default function Contact() {
+  const {
+    register,
+    reset,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>();
+
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [message, setMessage] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+
+  const { submit } = useWeb3Forms({
+    access_key: accessKey,
+    settings: {
+      from_name: "Portfolio Contact Form",
+      subject: "New Contact Message from Portfolio",
+    },
+    onSuccess: (msg) => {
+      setIsSuccess(true);
+      setMessage(msg);
+      reset();
+      setIsSubmitting(false);
+    },
+    onError: (msg) => {
+      setIsSuccess(false);
+      setMessage(msg);
+      setIsSubmitting(false);
+    },
+  });
+
+  const onSubmit = async (data: FormData) => {
+    setIsSubmitting(true);
+    // Add the access key to the form data
+    const formData = {
+      ...data,
+      access_key: accessKey,
+    };
+    await submit(formData);
+  };
+
+  // Reset success message after 5 seconds
+  useEffect(() => {
+    if (isSuccess) {
+      const timer = setTimeout(() => {
+        setMessage("");
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [isSuccess]);
+
   return (
     <div className="w-full">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -39,7 +101,7 @@ export default function Contact() {
                   <div>
                     <h3 className="text-lg font-medium">Email</h3>
                     <a
-                      href="mailto:sharan.shrivatsav@example.com"
+                      href="mailto:sharanshrivatsav0@gmail.com"
                       className="text-gray-300 hover:text-teal-500 transition-colors"
                     >
                       sharanshrivatsav0@gmail.com
@@ -114,7 +176,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Contact form or additional info */}
+          {/* Contact form */}
           <div className="bg-background-card p-8 rounded-2xl">
             <h2 className="text-2xl font-bold mb-6">Quick Message</h2>
             <p className="text-gray-300 mb-6">
@@ -122,7 +184,7 @@ export default function Contact() {
               get back to you as soon as possible.
             </p>
 
-            <div className="space-y-4">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
               <div>
                 <label
                   htmlFor="name"
@@ -133,9 +195,17 @@ export default function Contact() {
                 <input
                   type="text"
                   id="name"
-                  className="w-full p-3 bg-background-primary border border-background-button rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  {...register("name", { required: "Name is required" })}
+                  className={`w-full p-3 bg-background-primary border ${
+                    errors.name ? "border-red-500" : "border-background-button"
+                  } rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-teal-500`}
                   placeholder="Your name"
                 />
+                {errors.name && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {errors.name.message}
+                  </p>
+                )}
               </div>
 
               <div>
@@ -148,9 +218,23 @@ export default function Contact() {
                 <input
                   type="email"
                   id="email"
-                  className="w-full p-3 bg-background-primary border border-background-button rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  {...register("email", {
+                    required: "Email is required",
+                    pattern: {
+                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                      message: "Invalid email address",
+                    },
+                  })}
+                  className={`w-full p-3 bg-background-primary border ${
+                    errors.email ? "border-red-500" : "border-background-button"
+                  } rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-teal-500`}
                   placeholder="Your email"
                 />
+                {errors.email && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {errors.email.message}
+                  </p>
+                )}
               </div>
 
               <div>
@@ -163,20 +247,53 @@ export default function Contact() {
                 <textarea
                   id="message"
                   rows={5}
-                  className="w-full p-3 bg-background-primary border border-background-button rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  {...register("message", { required: "Message is required" })}
+                  className={`w-full p-3 bg-background-primary border ${
+                    errors.message
+                      ? "border-red-500"
+                      : "border-background-button"
+                  } rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-teal-500`}
                   placeholder="Your message"
                 ></textarea>
+                {errors.message && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {errors.message.message}
+                  </p>
+                )}
               </div>
 
-              <Button className="w-full py-3 text-md bg-white text-black rounded-2xl hover:bg-teal-500 hover:text-white">
-                <span>Send Message</span>
-                <ArrowRightIcon
-                  className="-me-1 transition-transform group-hover:translate-x-0.5"
-                  size={16}
-                  aria-hidden="true"
-                />
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full py-3 text-md bg-white text-black rounded-2xl hover:bg-teal-500 hover:text-white disabled:opacity-70 disabled:cursor-not-allowed"
+              >
+                <span>{isSubmitting ? "Sending..." : "Send Message"}</span>
+                {!isSubmitting && (
+                  <ArrowRightIcon
+                    className="-me-1 transition-transform group-hover:translate-x-0.5"
+                    size={16}
+                    aria-hidden="true"
+                  />
+                )}
               </Button>
-            </div>
+            </form>
+
+            {message && (
+              <div
+                className={`mt-4 p-3 rounded-lg flex items-center gap-2 rounded-2xl${
+                  isSuccess
+                    ? "bg-green-500/10 text-green-500"
+                    : "bg-red-500/10 text-red-500"
+                }`}
+              >
+                {isSuccess ? (
+                  <CheckCircle size={18} />
+                ) : (
+                  <AlertCircle size={18} />
+                )}
+                <p className="text-sm">{message}</p>
+              </div>
+            )}
           </div>
         </div>
 
