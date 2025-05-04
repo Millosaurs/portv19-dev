@@ -16,8 +16,6 @@ interface ProjectData {
   date: string;
 }
 
-// This would typically come from an API or database
-// For now, we'll hardcode the project data
 const projectsData: Record<string, ProjectData> = {
   "notebook-app": {
     id: "notebook-app",
@@ -58,24 +56,24 @@ const projectsData: Record<string, ProjectData> = {
     ],
     date: "September 2023",
   },
-  dashboard: {
-    id: "dashboard",
-    title: "E-commerce Dashboard",
-    description: "Comprehensive analytics dashboard for online stores",
+  heroic: {
+    id: "heroic-showcase",
+    title: "ShowCase for Heroic Studios",
+    description: "Crafting Immersive Minecraft Experiences for Players",
     longDescription:
-      "This E-commerce Dashboard provides store owners with comprehensive analytics and management tools. The dashboard includes real-time sales tracking, inventory management, customer insights, and marketing performance metrics.",
-    imageUrl: "/Dashboard/image.png",
-    technologies: ["React", "Redux", "Node.js", "Chart.js", "PostgreSQL"],
-    liveUrl: "https://ecommerce-dashboard.example.com",
-    githubUrl: "https://github.com/sharanshrivatsav/ecommerce-dashboard",
+      "A comprehensive showcase platform for Heroic Studios' Minecraft server configurations and setups. Features custom plugin configurations, server optimization techniques, and unique gameplay mechanics designed to enhance player experience. Includes detailed documentation of server architecture, performance tuning, and custom-built features.",
+    imageUrl: "/heroic/image.png",
+    technologies: ["React", "Vite", "Node.js", "Bun", "Tailwind"],
+    liveUrl: "https://heroic-studio.vercel.app/",
+    githubUrl: "https://github.com/Millosaurs/heroic-studio-showcase",
     features: [
-      "Real-time sales and revenue tracking",
-      "Inventory management system",
-      "Customer behavior analytics",
-      "Marketing campaign performance metrics",
-      "Customizable reporting tools",
+      "Custom plugin configuration showcase",
+      "Server optimization demonstrations",
+      "Interactive gameplay mechanics preview",
+      "Performance metrics visualization",
+      "Documentation and setup guides",
     ],
-    date: "December 2023",
+    date: "May 2025",
   },
 };
 

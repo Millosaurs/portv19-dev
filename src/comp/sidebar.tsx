@@ -58,16 +58,37 @@ const Sidebar = () => {
               FrontEnd Developer
             </text>
           </div>
-          <div className="flex flex-row justify-between px-14 py- pt-6">
-            <Github size={30} className="box-content text-background-button" />
-            <Linkedin
-              size={30}
-              className="box-content text-background-button"
-            />
-            <Instagram
-              size={30}
-              className="box-content text-background-button"
-            />
+          <div className="flex flex-row justify-between px-12 py-4 my-2 mt-4 bg-background-card rounded-2xl shadow-md">
+            <a
+              href="https://github.com/millosaurs"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Github
+                size={30}
+                className="hover:text-neutral-400 transition-colors"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/sharan-shrivatsav-b24a58358/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Linkedin
+                size={30}
+                className="hover:text-neutral-400 transition-colors"
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/sharanshrivatsav/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Instagram
+                size={30}
+                className="hover:text-neutral-400 transition-colors"
+              />
+            </a>
           </div>
         </div>
         <NavLinks />

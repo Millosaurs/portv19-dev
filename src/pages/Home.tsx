@@ -71,7 +71,7 @@ export default function Home() {
         {/* Tech Stack Section */}
         <div className="mb-8 md:mb-10 mt-16">
           <h2 className="text-xl md:text-2xl font-semibold mb-4">Tech Stack</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3  gap-4">
             <div className="flex items-center p-3 bg-background-card rounded-2xl">
               <SiJavascript className="text-3xl md:text-4xl text-yellow-400 mr-3" />
               <div className="flex flex-col">
@@ -144,13 +144,16 @@ export default function Home() {
           <div className="flex flex-col gap-4">
             <div className="bg-background-card p-4 rounded-2xl">
               <div className="flex justify-between items-start mb-2">
-                <h3 className="text-lg font-medium">Freelance Designer & Developer</h3>
+                <h3 className="text-lg font-medium">
+                  Freelance Designer & Developer
+                </h3>
                 <span className="text-sm text-gray-400">2023 - Present</span>
               </div>
               <p className="text-gray-300">
-                Over 2 years of freelancing experience specializing in UX/UI design and front-end development. 
-                Created minimalist and user-friendly interfaces for various clients, focusing on intuitive 
-                navigation and clean aesthetics.
+                Over 2 years of freelancing experience specializing in UX/UI
+                design and front-end development. Created minimalist and
+                user-friendly interfaces for various clients, focusing on
+                intuitive navigation and clean aesthetics.
               </p>
             </div>
             <div className="w-full sm:w-auto">

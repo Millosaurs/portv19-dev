@@ -82,9 +82,9 @@ export default function Projects() {
       link: "/projects/notebook-app",
     },
     {
-      title: "E-commerce Dashboard",
-      imageUrl: "/Dashboard/image.png",
-      link: "/projects/dashboard",
+      title: "Heroic Showcase",
+      imageUrl: "/heroic/image.png",
+      link: "/projects/heroic",
     },
   ];
 
