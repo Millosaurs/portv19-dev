@@ -75,7 +75,7 @@ const projectsData: Record<string, ProjectData> = {
     ],
     date: "May 2025",
   },
-  "Koala-Hosting": {
+  "koala-hosting": {
     id: "Koala-Hosting",
     title: "Koala Hosting Landing Page",
     description: "A modern and responsive landing page for Koala Hosting",
