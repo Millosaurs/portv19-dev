@@ -86,6 +86,11 @@ export default function Projects() {
       imageUrl: "/heroic/image.png",
       link: "/projects/heroic",
     },
+    {
+      title: "Koala Hosting Landing Page",
+      imageUrl: "/koala-hosting/image.png",
+      link: "/projects/koala-hosting",
+    },
   ];
 
   return (

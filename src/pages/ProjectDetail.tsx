@@ -75,6 +75,32 @@ const projectsData: Record<string, ProjectData> = {
     ],
     date: "May 2025",
   },
+  "Koala-Hosting": {
+    id: "Koala-Hosting",
+    title: "Koala Hosting Landing Page",
+    description: "A modern and responsive landing page for Koala Hosting",
+    longDescription:
+      "A modern and responsive landing page for Koala Hosting, a reliable and secure hosting provider. The page features a clean and intuitive design, showcasing the hosting services and benefits. It also includes a contact form and social media links for easy communication with potential customers.",
+    imageUrl: "/koala-hosting/image.png",
+    technologies: [
+      "React",
+      "NextJs",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "TypeScript",
+    ],
+    liveUrl: "https://koala-host-dev.vercel.app/",
+    githubUrl: "",
+    features: [
+      "Clean and modern design",
+      "Responsive layout for various devices",
+      "Contact form for easy communication",
+      "Social media links for easy access",
+      "SEO optimized for better visibility",
+      "Customizable and easy to maintain",
+    ],
+    date: "May 2025",
+  },
 };
 
 export default function ProjectDetail() {
