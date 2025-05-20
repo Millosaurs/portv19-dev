@@ -89,7 +89,7 @@ const projectsData: Record<string, ProjectData> = {
       "Shadcn UI",
       "TypeScript",
     ],
-    liveUrl: "https://koala-host-dev.vercel.app/",
+    liveUrl: "https://koala-dev.shrivatsav.dev/",
     githubUrl: "",
     features: [
       "Clean and modern design",
