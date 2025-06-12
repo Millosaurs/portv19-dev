@@ -85,7 +85,7 @@ export default function Projects() {
       title: "NoteBook-App",
       creator: "Sharan Shrivatsav",
       imageUrl: "/Orangy/image.png",
-      link: "/projects/notebook-app",
+      link: "/projects/notebook",
     },
     {
       title: "Heroic Showcase",
