@@ -17,6 +17,40 @@ interface ProjectData {
 }
 
 const projectsData: Record<string, ProjectData> = {
+  resqr: {
+    id: "resqr",
+    title: "ResQr - resturant management application",
+    description:
+      "A simple and sleak resturant management app for resturant owners and staff.",
+    longDescription:
+      "This SaaS application empowers restaurant owners to create digital menus accessible via QR codes. It offers a seamless experience for customers to view menus and provide feedback, while enabling restaurant owners to manage their offerings efficiently.",
+    imageUrl: "/resqr/image.png",
+    technologies: [
+      "React",
+      "NextJs",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "TypeScript",
+      "Neon (Postgres)",
+      "Drizzle",
+      "Better auth",
+      "Polar (Stripe)",
+      "Wise - (null)",
+    ],
+    liveUrl: "https://resqr.shrivatsav.dev/",
+    githubUrl: "",
+    features: [
+      "Clean and modern design",
+      "Responsive layout for various devices",
+      "Real-time Analytics - Track performance metrics that matter",
+      "Instant optimisations - AI-powered recommendations for efficiency",
+      "Multi ~ Location Support - Scale across all your restaurant locations",
+      "Enteripise Security - Bank-level security for your data",
+      "SEO optimized for better visibility",
+      "Customizable and easy to maintain",
+    ],
+    date: "May 2025",
+  },
   "notebook-app": {
     id: "notebook-app",
     title: "NoteBook-App",
