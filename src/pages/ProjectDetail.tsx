@@ -17,7 +17,7 @@ interface ProjectData {
 }
 
 const projectsData: Record<string, ProjectData> = {
-  "resqr": {
+  resqr: {
     id: "resqr",
     title: "ResQr - resturant management application",
     description:
@@ -51,7 +51,7 @@ const projectsData: Record<string, ProjectData> = {
     ],
     date: "May 2025",
   },
-  "notebook-app": {
+  notebook: {
     id: "notebook-app",
     title: "NoteBook-App",
     description: "A clean, minimal note-taking application",

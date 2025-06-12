@@ -71,6 +71,12 @@ const ProjectCard = ({
 export default function Projects() {
   const projects = [
     {
+      title: "ResQr - Resturant management application",
+      imageUrl: "/resqr/image.png",
+      link: "/projects/resqr",
+    },
+
+    {
       title: "Achievement Tracker",
       imageUrl: "/ArcHide/image.png",
       link: "/projects/act",
