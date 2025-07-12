@@ -17,6 +17,30 @@ interface ProjectData {
 }
 
 const projectsData: Record<string, ProjectData> = {
+  gamestash: {
+    id: "gamestash",
+    title: "Gamestash - Digital Game Asset Store",
+    description: "A digital game asset store for gamers and developers.",
+    longDescription:
+      "Gamestash is a digital game asset store for gamers and developers. It offers a wide range of game assets, including textures, models, and shaders. It also features a user-friendly interface and a secure payment system.",
+    imageUrl: "/gamestash/image.png",
+    technologies: [
+      "React",
+      "NextJs",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "TypeScript",
+      "Neon (Postgres)",
+      "Drizzle",
+      "Better auth",
+      "Polar (Stripe)",
+      "Wise - (null)",
+    ],
+    liveUrl: "https://gamestash.net/",
+    githubUrl: "https://github.com/Millosaurs/Gamestash",
+    features: [],
+    date: "July 2025",
+  },
   resqr: {
     id: "resqr",
     title: "ResQr - resturant management application",

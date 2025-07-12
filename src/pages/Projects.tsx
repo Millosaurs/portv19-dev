@@ -71,6 +71,11 @@ const ProjectCard = ({
 export default function Projects() {
   const projects = [
     {
+      title: "Gamestash - Digital Game Asset Store",
+      imageUrl: "/gamestash/image.png",
+      link: "/projects/gamestash",
+    },
+    {
       title: "ResQr - Resturant management application",
       imageUrl: "/resqr/image.png",
       link: "/projects/resqr",
