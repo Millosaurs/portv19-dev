@@ -15,14 +15,14 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   const content = (
     <div className="flex flex-col overflow-hidden transition-all duration-300 hover:scale-[1.01] group w-full">
-      <div className="h-[200px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden bg-background-card rounded-3xl relative w-[100%]">
+      <div className="aspect-[16/9] overflow-hidden bg-background-card rounded-3xl relative w-full">
         <img
           src={imageUrl}
           alt={title}
-          className="w-full h-full md:object-left object-cover transition-transform duration-500 group-hover:scale-110"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           onError={(e) => {
             const target = e.target as HTMLImageElement;
-            target.src = "/placeholder.svg"; // Fallback image
+            target.src = "/placeholder.svg";
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 sm:p-6 md:p-8">
@@ -71,16 +71,15 @@ const ProjectCard = ({
 export default function Projects() {
   const projects = [
     {
-      title: "Gamestash - Digital Game Asset Store",
-      imageUrl: "/gamestash/image.png",
-      link: "/projects/gamestash",
-    },
-    {
       title: "ResQr - Resturant management application",
       imageUrl: "/resqr/image.png",
       link: "/projects/resqr",
     },
-
+    {
+      title: "Gamestash - Digital Game Asset Store",
+      imageUrl: "/gamestash/image.png",
+      link: "/projects/gamestash",
+    },
     {
       title: "Achievement Tracker",
       imageUrl: "/ArcHide/image.png",
@@ -106,7 +105,7 @@ export default function Projects() {
 
   return (
     <div className="w-full">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 lg:pr-18">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-6 md:mb-8">
           <div className="inline-flex items-center px-2 py-1 rounded-full bg-background-button/70 text-blue-500 text-xs mb-3 md:mb-4">
             <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>

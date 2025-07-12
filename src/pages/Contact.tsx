@@ -1,12 +1,10 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRightIcon, CheckCircle, AlertCircle } from "lucide-react";
 import "../index.css";
 import { FaLinkedin } from "react-icons/fa";
 import { SiFiverr, SiIndeed } from "react-icons/si";
 import { MdEmail, MdPlace } from "react-icons/md";
-import { useState, useEffect } from "react";
+import { FaDiscord } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6"; // For the X (Twitter) logo
 import { useForm } from "react-hook-form";
-import useWeb3Forms from "@web3forms/react";
 
 // Define form data type
 interface FormData {
@@ -16,57 +14,7 @@ interface FormData {
 }
 
 export default function Contact() {
-  const {
-    register,
-    reset,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<FormData>();
-
-  const [isSuccess, setIsSuccess] = useState(false);
-  const [message, setMessage] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
-
-  const { submit } = useWeb3Forms({
-    access_key: accessKey,
-    settings: {
-      from_name: "Portfolio Contact Form",
-      subject: "New Contact Message from Portfolio",
-    },
-    onSuccess: (msg) => {
-      setIsSuccess(true);
-      setMessage(msg);
-      reset();
-      setIsSubmitting(false);
-    },
-    onError: (msg) => {
-      setIsSuccess(false);
-      setMessage(msg);
-      setIsSubmitting(false);
-    },
-  });
-
-  const onSubmit = async (data: FormData) => {
-    setIsSubmitting(true);
-    // Add the access key to the form data
-    const formData = {
-      ...data,
-      access_key: accessKey,
-    };
-    await submit(formData);
-  };
-
-  // Reset success message after 5 seconds
-  useEffect(() => {
-    if (isSuccess) {
-      const timer = setTimeout(() => {
-        setMessage("");
-      }, 5000);
-      return () => clearTimeout(timer);
-    }
-  }, [isSuccess]);
+  const {} = useForm<FormData>();
 
   return (
     <div className="w-full">
@@ -144,156 +92,36 @@ export default function Contact() {
                 </a>
 
                 <a
-                  href="https://www.fiverr.com/sharan_shrivatsav"
+                  href="https://discord.com/users/Millosaurs"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-background-card p-5 rounded-2xl flex items-center gap-4 hover:bg-background-primary transition-colors"
                 >
-                  <div className="bg-green-500/10 p-3 rounded-full">
-                    <SiFiverr className="text-2xl text-green-500" />
+                  <div className="bg-indigo-500/10 p-3 rounded-full">
+                    <FaDiscord className="text-2xl text-indigo-500" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-medium">Fiverr</h3>
-                    <p className="text-gray-400 text-sm">Freelance services</p>
+                    <h3 className="text-lg font-medium">Discord</h3>
+                    <p className="text-gray-400 text-sm">Join my Discord</p>
                   </div>
                 </a>
 
                 <a
-                  href="https://www.indeed.com/profile/sharan-shrivatsav"
+                  href="https://x.com/shrivatsav_"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-background-card p-5 rounded-2xl flex items-center gap-4 hover:bg-background-primary transition-colors"
                 >
-                  <div className="bg-blue-400/10 p-3 rounded-full">
-                    <SiIndeed className="text-2xl text-blue-400" />
+                  <div className="bg-black/10 p-3 rounded-full">
+                    <FaXTwitter className="text-2xl text-black" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-medium">Indeed</h3>
-                    <p className="text-gray-400 text-sm">Job opportunities</p>
+                    <h3 className="text-lg font-medium">X (Twitter)</h3>
+                    <p className="text-gray-400 text-sm">Follow me on X</p>
                   </div>
                 </a>
               </div>
             </div>
-          </div>
-
-          {/* Contact form */}
-          <div className="bg-background-card p-8 rounded-2xl">
-            <h2 className="text-2xl font-bold mb-6">Quick Message</h2>
-            <p className="text-gray-300 mb-6">
-              Have a specific project in mind? Let me know the details and I'll
-              get back to you as soon as possible.
-            </p>
-
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-gray-300 mb-1"
-                >
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  {...register("name", { required: "Name is required" })}
-                  className={`w-full p-3 bg-background-primary border ${
-                    errors.name ? "border-red-500" : "border-background-button"
-                  } rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-teal-500`}
-                  placeholder="Your name"
-                />
-                {errors.name && (
-                  <p className="text-red-500 text-xs mt-1">
-                    {errors.name.message}
-                  </p>
-                )}
-              </div>
-
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-gray-300 mb-1"
-                >
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  {...register("email", {
-                    required: "Email is required",
-                    pattern: {
-                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                      message: "Invalid email address",
-                    },
-                  })}
-                  className={`w-full p-3 bg-background-primary border ${
-                    errors.email ? "border-red-500" : "border-background-button"
-                  } rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-teal-500`}
-                  placeholder="Your email"
-                />
-                {errors.email && (
-                  <p className="text-red-500 text-xs mt-1">
-                    {errors.email.message}
-                  </p>
-                )}
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-gray-300 mb-1"
-                >
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  rows={5}
-                  {...register("message", { required: "Message is required" })}
-                  className={`w-full p-3 bg-background-primary border ${
-                    errors.message
-                      ? "border-red-500"
-                      : "border-background-button"
-                  } rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-teal-500`}
-                  placeholder="Your message"
-                ></textarea>
-                {errors.message && (
-                  <p className="text-red-500 text-xs mt-1">
-                    {errors.message.message}
-                  </p>
-                )}
-              </div>
-
-              <Button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full py-3 text-md bg-white text-black rounded-2xl hover:bg-teal-500 hover:text-white disabled:opacity-70 disabled:cursor-not-allowed"
-              >
-                <span>{isSubmitting ? "Sending..." : "Send Message"}</span>
-                {!isSubmitting && (
-                  <ArrowRightIcon
-                    className="-me-1 transition-transform group-hover:translate-x-0.5"
-                    size={16}
-                    aria-hidden="true"
-                  />
-                )}
-              </Button>
-            </form>
-
-            {message && (
-              <div
-                className={`mt-4 p-3 rounded-lg flex items-center gap-2 rounded-2xl${
-                  isSuccess
-                    ? "bg-green-500/10 text-green-500"
-                    : "bg-red-500/10 text-red-500"
-                }`}
-              >
-                {isSuccess ? (
-                  <CheckCircle size={18} />
-                ) : (
-                  <AlertCircle size={18} />
-                )}
-                <p className="text-sm">{message}</p>
-              </div>
-            )}
           </div>
         </div>
 

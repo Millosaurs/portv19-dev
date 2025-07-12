@@ -28,7 +28,7 @@ export default function Home() {
             Hello! I'm Sharan Shrivatsav 👋
           </h1>
           <h1 className="text-xl md:text-3xl text-gray-400">
-            Intermediate. Designer & Front-end Developer.
+            Intermediate. Designer & Web Developer.
           </h1>
         </div>
         <div className="text-text-accent-orange/60 flex flex-row items-center p-2 pb-4 md:pb-8">

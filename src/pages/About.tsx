@@ -57,7 +57,7 @@ export default function About() {
                 I'm a first-year Computer Science student with a passion for
                 creating intuitive and visually appealing digital experiences.
                 My journey in tech began with a curiosity about how websites
-                work, which led me to explore front-end development and design.
+                work, which led me to explore web development and design.
               </p>
               <p className="text-gray-300">
                 I believe in the power of technology to solve problems and
@@ -74,7 +74,7 @@ export default function About() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
                 <div className="bg-background-card p-4 md:p-5 rounded-2xl">
                   <h3 className="text-base md:text-lg font-medium mb-2 md:mb-3">
-                    Front-end Development
+                    Web Development
                   </h3>
                   <ul className="space-y-1 text-sm md:text-base text-gray-300">
                     <li>HTML, CSS, JavaScript</li>
