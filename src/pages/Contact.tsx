@@ -1,6 +1,5 @@
 import "../index.css";
 import { FaLinkedin } from "react-icons/fa";
-import { SiFiverr, SiIndeed } from "react-icons/si";
 import { MdEmail, MdPlace } from "react-icons/md";
 import { FaDiscord } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6"; // For the X (Twitter) logo
