@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { projects } from "@/assets/projects";
 
 interface ProjectCardProps {
   title: string;
@@ -69,40 +70,6 @@ const ProjectCard = ({
 };
 
 export default function Projects() {
-  const projects = [
-    {
-      title: "ResQr - Resturant management application",
-      imageUrl: "/resqr/image.png",
-      link: "/projects/resqr",
-    },
-    {
-      title: "Gamestash - Digital Game Asset Store",
-      imageUrl: "/gamestash/image.png",
-      link: "/projects/gamestash",
-    },
-    {
-      title: "Achievement Tracker",
-      imageUrl: "/ArcHide/image.png",
-      link: "/projects/act",
-    },
-    {
-      title: "NoteBook-App",
-      creator: "Sharan Shrivatsav",
-      imageUrl: "/Orangy/image.png",
-      link: "/projects/notebook",
-    },
-    {
-      title: "Heroic Showcase",
-      imageUrl: "/heroic/image.png",
-      link: "/projects/heroic",
-    },
-    {
-      title: "Koala Hosting Landing Page",
-      imageUrl: "/koala-hosting/image.png",
-      link: "/projects/koala-hosting",
-    },
-  ];
-
   return (
     <div className="w-full">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">

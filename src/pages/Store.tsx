@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRightIcon } from "lucide-react";
 import "../index.css";
 import { Link } from "react-router-dom";
+import { storeItems } from "@/assets/storeItems";
 
 interface StoreItemProps {
   title: string;
@@ -57,41 +58,6 @@ const StoreItem = ({
 };
 
 export default function Store() {
-  const storeItems = [
-    {
-      title: "UI Component Library",
-      price: "$49",
-      imageUrl: "/placeholder.svg",
-      description:
-        "A collection of premium UI components for modern web applications",
-      link: "/store/ui-components",
-    },
-    {
-      title: "Portfolio Template",
-      price: "$29",
-      imageUrl: "/placeholder.svg",
-      description:
-        "Professional portfolio template for developers and designers",
-      link: "/store/portfolio-template",
-    },
-    {
-      title: "Design System",
-      price: "$79",
-      imageUrl: "/placeholder.svg",
-      description:
-        "Complete design system with Figma files and code implementation",
-      link: "/store/design-system",
-    },
-    {
-      title: "React Hooks Collection",
-      price: "$19",
-      imageUrl: "/placeholder.svg",
-      description:
-        "Custom React hooks for common UI patterns and functionality",
-      link: "/store/react-hooks",
-    },
-  ];
-
   return (
     <div className="w-full">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
