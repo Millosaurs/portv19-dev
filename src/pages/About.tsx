@@ -23,24 +23,28 @@ import {
     SiGithub,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
-
 export default function About() {
     return (
         <div className="w-full">
+            {" "}
             <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+                {" "}
                 <div className="mb-8 md:mb-12 animate-in fade-in slide-in-from-bottom-4">
+                    {" "}
                     <div className="inline-flex items-center px-2 py-1 rounded-full bg-background-button/70 text-purple-500 text-xs mb-3 md:mb-4">
-                        <span className="w-2 h-2 bg-purple-500 rounded-full mr-2 animate-pulse"></span>
-                        My Journey
-                    </div>
+                        {" "}
+                        <span className="w-2 h-2 bg-purple-500 rounded-full mr-2 animate-pulse"></span>{" "}
+                        My Journey{" "}
+                    </div>{" "}
                     <h1 className="text-3xl md:text-5xl font-bold mb-3">
-                        About Me
-                    </h1>
+                        {" "}
+                        About Me{" "}
+                    </h1>{" "}
                     <p className="text-lg md:text-xl text-gray-400">
-                        Designer, developer, and creative problem solver
-                    </p>
-                </div>
-
+                        {" "}
+                        Designer, developer, and creative problem solver{" "}
+                    </p>{" "}
+                </div>{" "}
                 <div
                     className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 my-8 md:my-12 animate-in fade-in slide-in-from-bottom-4"
                     style={{
@@ -48,40 +52,54 @@ export default function About() {
                         animationFillMode: "backwards",
                     }}
                 >
+                    {" "}
                     <div className="md:col-span-1">
+                        {" "}
                         <div className="bg-background-card rounded-3xl overflow-hidden hover:scale-105 transition-all duration-300">
+                            {" "}
                             <img
                                 src="https://avatars.githubusercontent.com/u/161939687?v=4"
                                 alt="Sharan Shrivatsav"
                                 className="w-full aspect-square object-cover"
-                            />
-                        </div>
+                            />{" "}
+                        </div>{" "}
                         <div className="mt-4 md:mt-6 space-y-4 md:space-y-5">
+                            {" "}
                             <div className="bg-background-card p-4 rounded-2xl">
+                                {" "}
                                 <h3 className="text-base md:text-lg font-semibold mb-2">
-                                    Location
-                                </h3>
+                                    {" "}
+                                    Location{" "}
+                                </h3>{" "}
                                 <div className="text-text-accent-orange/60 flex flex-row items-center">
-                                    <MdPlace className="text-lg md:text-xl mr-2" />
-                                    <span>Bangalore, India</span>
-                                </div>
-                            </div>
+                                    {" "}
+                                    <MdPlace className="text-lg md:text-xl mr-2" />{" "}
+                                    <span>Bangalore, India</span>{" "}
+                                </div>{" "}
+                            </div>{" "}
                             <div className="bg-background-card p-4 rounded-2xl">
+                                {" "}
                                 <h3 className="text-base md:text-lg font-semibold mb-2">
-                                    Education
-                                </h3>
+                                    {" "}
+                                    Education{" "}
+                                </h3>{" "}
                                 <p className="text-gray-300 font-medium">
-                                    Computer Science Major
-                                </p>
+                                    {" "}
+                                    Computer Science Major{" "}
+                                </p>{" "}
                                 <p className="text-xs md:text-sm text-gray-400">
-                                    First Year Student
-                                </p>
-                            </div>
+                                    {" "}
+                                    First Year Student{" "}
+                                </p>{" "}
+                            </div>{" "}
                             <div className="bg-background-card p-4 rounded-2xl">
+                                {" "}
                                 <h3 className="text-base md:text-lg font-semibold mb-2">
-                                    Availability
-                                </h3>
+                                    {" "}
+                                    Availability{" "}
+                                </h3>{" "}
                                 <div className="inline-flex items-center gap-2">
+                                    {" "}
                                     <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
                                     <p className="text-gray-300">
                                         Available for Work
@@ -90,7 +108,6 @@ export default function About() {
                             </div>
                         </div>
                     </div>
-
                     <div className="md:col-span-2 space-y-6 md:space-y-8 mt-6 md:mt-0">
                         <div className="bg-background-card p-6 md:p-8 rounded-3xl">
                             <h2 className="text-2xl md:text-3xl font-bold mb-4">
