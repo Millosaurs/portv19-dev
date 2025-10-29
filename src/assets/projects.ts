@@ -1,215 +1,381 @@
 export interface ProjectData {
-  id: string;
-  title: string;
-  description: string;
-  longDescription: string;
-  imageUrl: string;
-  technologies: string[];
-  liveUrl?: string;
-  githubUrl?: string;
-  features?: string[];
-  date: string;
+    id: string;
+    title: string;
+    description: string;
+    longDescription: string;
+    imageUrl: string;
+    technologies: string[];
+    liveUrl?: string;
+    githubUrl?: string;
+    features?: string[];
+    date: string;
+    featured?: boolean;
 }
 
 export const projectsData: Record<string, ProjectData> = {
-  gamestash: {
-    id: "gamestash",
-    title: "Gamestash - Digital Game Asset Store",
-    description: "A digital game asset store for gamers and developers.",
-    longDescription:
-      "Gamestash is a digital game asset store for gamers and developers. It offers a wide range of game assets, including textures, models, and shaders. It also features a user-friendly interface and a secure payment system.",
-    imageUrl: "/gamestash/image.png",
-    technologies: [
-      "React",
-      "NextJs",
-      "Tailwind CSS",
-      "Shadcn UI",
-      "TypeScript",
-      "Neon (Postgres)",
-      "Drizzle",
-      "Better auth",
-      "Polar (Stripe)",
-      "Wise - (null)",
-    ],
-    liveUrl: "https://gamestash.net/",
-    githubUrl: "https://github.com/Millosaurs/Gamestash",
-    features: [
-      "Script marketplace: browse, purchase, and sell code scripts",
-      "Modern UI built with Radix UI components and Tailwind CSS",
-      "Dark and light mode support with next-themes",
-      "Analytics dashboard to track script performance",
-      "Secure user authentication system (social logins only)",
-      "PostgreSQL database powered by Drizzle ORM",
-      "Responsive, mobile-first design",
-      "Advanced search and filtering for assets by type, style, engine, and price",
-      "Secure payment system with Stripe integration",
-      "Instant digital downloads after purchase",
-      "Asset licensing information clearly displayed",
-      "Developer dashboard for uploading and managing assets",
-      "Wishlist and favorites for users",
-      "Ratings and reviews for assets",
-      "Regularly updated with new assets and collections",
-      "Support for multiple file formats (FBX, PNG, WAV, etc.)",
-      "Community features: user profiles, following creators, and messaging",
-      "Integration with modern game engines (Unity, Unreal, Godot)",
-      "Promotional sales and featured assets",
-      "API documentation and developer tools",
-      "Customer support and help center",
-    ],
-    date: "July 2025",
-  },
-  resqr: {
-    id: "resqr",
-    title: "ResQr - resturant management application",
-    description:
-      "A simple and sleak resturant management app for resturant owners and staff.",
-    longDescription:
-      "This SaaS application empowers restaurant owners to create digital menus accessible via QR codes. It offers a seamless experience for customers to view menus and provide feedback, while enabling restaurant owners to manage their offerings efficiently.",
-    imageUrl: "/resqr/image.png",
-    technologies: [
-      "React",
-      "NextJs",
-      "Tailwind CSS",
-      "Shadcn UI",
-      "TypeScript",
-      "Neon (Postgres)",
-      "Drizzle",
-      "Better auth",
-      "Polar (Stripe)",
-      "Wise - (null)",
-    ],
-    liveUrl: "https://resqr.shrivatsav.dev/",
-    githubUrl: "",
-    features: [
-      "Clean and modern design",
-      "Responsive layout for various devices",
-      "Real-time Analytics - Track performance metrics that matter",
-      "Instant optimisations - AI-powered recommendations for efficiency",
-      "Multi ~ Location Support - Scale across all your restaurant locations",
-      "Enteripise Security - Bank-level security for your data",
-      "SEO optimized for better visibility",
-      "Customizable and easy to maintain",
-    ],
-    date: "May 2025",
-  },
-  notebook: {
-    id: "notebook-app",
-    title: "NoteBook-App",
-    description: "A clean, minimal note-taking application",
-    longDescription:
-      "Orangy is a modern note-taking application designed to help users organize their thoughts, tasks, and ideas in a clean, intuitive interface. The application features real-time synchronization, markdown support, and customizable organization systems.",
-    imageUrl: "/Orangy/image.png",
-    technologies: ["React", "TypeScript", "Firebase", "Tailwind CSS"],
-    liveUrl: "https://note-book-gamma.vercel.app/",
-    githubUrl: "https://github.com/Millosaurs/NoteBook",
-    features: [
-      "Real-time synchronization across devices",
-      "Markdown support for rich text formatting",
-      "Customizable organization with tags and folders",
-      "Dark and light theme options",
-      "Offline capability with local storage",
-    ],
-    date: "June 2023",
-  },
-  act: {
-    id: "act",
-    title: "Achievement Tracker",
-    description:
-      "Track and showcase your personal and professional achievements",
-    longDescription:
-      "Achievement Tracker is a comprehensive platform that helps users document, organize, and showcase their personal and professional accomplishments. The application provides customizable templates, data visualization, and sharing capabilities.",
-    imageUrl: "/ArcHide/image.png",
-    technologies: ["Next.js", "MongoDB", "Express", "Node.js"],
-    liveUrl: "https://arc-hide.vercel.app/",
-    githubUrl: "https://github.com/Millosaurs/ArcHide",
-    features: [
-      "Customizable achievement templates",
-      "Data visualization of progress over time",
-      "Public profile sharing options",
-      "Integration with LinkedIn and other platforms",
-      "Resume generation based on achievements",
-    ],
-    date: "September 2023",
-  },
-  heroic: {
-    id: "heroic-showcase",
-    title: "ShowCase for Heroic Studios",
-    description: "Crafting Immersive Minecraft Experiences for Players",
-    longDescription:
-      "A comprehensive showcase platform for Heroic Studios' Minecraft server configurations and setups. Features custom plugin configurations, server optimization techniques, and unique gameplay mechanics designed to enhance player experience. Includes detailed documentation of server architecture, performance tuning, and custom-built features.",
-    imageUrl: "/heroic/image.png",
-    technologies: ["React", "Vite", "Node.js", "Bun", "Tailwind"],
-    liveUrl: "https://heroic-studio.vercel.app/",
-    githubUrl: "https://github.com/Millosaurs/heroic-studio-showcase",
-    features: [
-      "Custom plugin configuration showcase",
-      "Server optimization demonstrations",
-      "Interactive gameplay mechanics preview",
-      "Performance metrics visualization",
-      "Documentation and setup guides",
-    ],
-    date: "May 2025",
-  },
-  "koala-hosting": {
-    id: "Koala-Hosting",
-    title: "Koala Hosting Landing Page",
-    description: "A modern and responsive landing page for Koala Hosting",
-    longDescription:
-      "A modern and responsive landing page for Koala Hosting, a reliable and secure hosting provider. The page features a clean and intuitive design, showcasing the hosting services and benefits. It also includes a contact form and social media links for easy communication with potential customers.",
-    imageUrl: "/koala-hosting/image.png",
-    technologies: [
-      "React",
-      "NextJs",
-      "Tailwind CSS",
-      "Shadcn UI",
-      "TypeScript",
-    ],
-    liveUrl: "https://koala-dev.shrivatsav.dev/",
-    githubUrl: "",
-    features: [
-      "Clean and modern design",
-      "Responsive layout for various devices",
-      "Contact form for easy communication",
-      "Social media links for easy access",
-      "SEO optimized for better visibility",
-      "Customizable and easy to maintain",
-    ],
-    date: "May 2025",
-  },
+    gamestash: {
+        id: "gamestash",
+        title: "Gamestash - Digital Game Asset Store",
+        description: "A digital game asset store for gamers and developers.",
+        longDescription:
+            "Gamestash is a digital game asset store for gamers and developers. It offers a wide range of game assets, including textures, models, and shaders. It also features a user-friendly interface and a secure payment system.",
+        imageUrl: "/gamestash/image.png",
+        technologies: [
+            "React",
+            "NextJs",
+            "Tailwind CSS",
+            "Shadcn UI",
+            "TypeScript",
+            "Neon (Postgres)",
+            "Drizzle",
+            "Better auth",
+            "Polar (Stripe)",
+            "Wise - (null)",
+        ],
+        liveUrl: "https://gamestash.net/",
+        githubUrl: "https://github.com/Millosaurs/Gamestash",
+        features: [
+            "Script marketplace: browse, purchase, and sell code scripts",
+            "Modern UI built with Radix UI components and Tailwind CSS",
+            "Dark and light mode support with next-themes",
+            "Analytics dashboard to track script performance",
+            "Secure user authentication system (social logins only)",
+            "PostgreSQL database powered by Drizzle ORM",
+            "Responsive, mobile-first design",
+            "Advanced search and filtering for assets by type, style, engine, and price",
+            "Secure payment system with Stripe integration",
+            "Instant digital downloads after purchase",
+            "Asset licensing information clearly displayed",
+            "Developer dashboard for uploading and managing assets",
+            "Wishlist and favorites for users",
+            "Ratings and reviews for assets",
+            "Regularly updated with new assets and collections",
+            "Support for multiple file formats (FBX, PNG, WAV, etc.)",
+            "Community features: user profiles, following creators, and messaging",
+            "Integration with modern game engines (Unity, Unreal, Godot)",
+            "Promotional sales and featured assets",
+            "API documentation and developer tools",
+            "Customer support and help center",
+        ],
+        date: "July 2025",
+    },
+    resqr: {
+        id: "resqr",
+        title: "ResQr - resturant management application",
+        description:
+            "A simple and sleak resturant management app for resturant owners and staff.",
+        longDescription:
+            "This SaaS application empowers restaurant owners to create digital menus accessible via QR codes. It offers a seamless experience for customers to view menus and provide feedback, while enabling restaurant owners to manage their offerings efficiently.",
+        imageUrl: "/resqr/image.png",
+        technologies: [
+            "React",
+            "NextJs",
+            "Tailwind CSS",
+            "Shadcn UI",
+            "TypeScript",
+            "Neon (Postgres)",
+            "Drizzle",
+            "Better auth",
+            "Polar (Stripe)",
+            "Wise - (null)",
+        ],
+        liveUrl: "https://resqr.shrivatsav.dev/",
+        githubUrl: "",
+        features: [
+            "Clean and modern design",
+            "Responsive layout for various devices",
+            "Real-time Analytics - Track performance metrics that matter",
+            "Instant optimisations - AI-powered recommendations for efficiency",
+            "Multi ~ Location Support - Scale across all your restaurant locations",
+            "Enteripise Security - Bank-level security for your data",
+            "SEO optimized for better visibility",
+            "Customizable and easy to maintain",
+        ],
+        date: "May 2025",
+        featured: true,
+    },
+    notebook: {
+        id: "notebook-app",
+        title: "NoteBook-App",
+        description: "A clean, minimal note-taking application",
+        longDescription:
+            "Orangy is a modern note-taking application designed to help users organize their thoughts, tasks, and ideas in a clean, intuitive interface. The application features real-time synchronization, markdown support, and customizable organization systems.",
+        imageUrl: "/Orangy/image.png",
+        technologies: ["React", "TypeScript", "Firebase", "Tailwind CSS"],
+        liveUrl: "https://note-book-gamma.vercel.app/",
+        githubUrl: "https://github.com/Millosaurs/NoteBook",
+        features: [
+            "Real-time synchronization across devices",
+            "Markdown support for rich text formatting",
+            "Customizable organization with tags and folders",
+            "Dark and light theme options",
+            "Offline capability with local storage",
+        ],
+        date: "June 2023",
+    },
+    act: {
+        id: "act",
+        title: "Achievement Tracker (UI Only)",
+        description:
+            "UI design concept for tracking personal and professional achievements",
+        longDescription:
+            "Achievement Tracker is a UI design concept showcasing how users could document, organize, and showcase their personal and professional accomplishments. This project focuses on the visual design and user interface, featuring customizable templates, data visualization concepts, and sharing capabilities.",
+        imageUrl: "/ArcHide/image.png",
+        technologies: ["Next.js", "Tailwind CSS", "React"],
+        liveUrl: "https://arc-hide.vercel.app/",
+        githubUrl: "https://github.com/Millosaurs/ArcHide",
+        features: [
+            "UI design concept only",
+            "Customizable achievement templates design",
+            "Data visualization mockups",
+            "Public profile sharing UI",
+            "Modern and clean interface",
+            "Responsive design layout",
+        ],
+        date: "September 2023",
+    },
+    heroic: {
+        id: "heroic-showcase",
+        title: "ShowCase for Heroic Studios",
+        description: "Crafting Immersive Minecraft Experiences for Players",
+        longDescription:
+            "A comprehensive showcase platform for Heroic Studios' Minecraft server configurations and setups. Features custom plugin configurations, server optimization techniques, and unique gameplay mechanics designed to enhance player experience. Includes detailed documentation of server architecture, performance tuning, and custom-built features.",
+        imageUrl: "/heroic/image.png",
+        technologies: ["React", "Vite", "Node.js", "Bun", "Tailwind"],
+        liveUrl: "https://heroic-studio.vercel.app/",
+        githubUrl: "https://github.com/Millosaurs/heroic-studio-showcase",
+        features: [
+            "Custom plugin configuration showcase",
+            "Server optimization demonstrations",
+            "Interactive gameplay mechanics preview",
+            "Performance metrics visualization",
+            "Documentation and setup guides",
+        ],
+        date: "May 2025",
+    },
+    "koala-hosting": {
+        id: "Koala-Hosting",
+        title: "Koala Hosting Landing Page",
+        description: "A modern and responsive landing page for Koala Hosting",
+        longDescription:
+            "A modern and responsive landing page for Koala Hosting, a reliable and secure hosting provider. The page features a clean and intuitive design, showcasing the hosting services and benefits. It also includes a contact form and social media links for easy communication with potential customers.",
+        imageUrl: "/koala-hosting/image.png",
+        technologies: [
+            "React",
+            "NextJs",
+            "Tailwind CSS",
+            "Shadcn UI",
+            "TypeScript",
+        ],
+        liveUrl: "https://koala-dev.shrivatsav.dev/",
+        githubUrl: "",
+        features: [
+            "Clean and modern design",
+            "Responsive layout for various devices",
+            "Contact form for easy communication",
+            "Social media links for easy access",
+            "SEO optimized for better visibility",
+            "Customizable and easy to maintain",
+        ],
+        date: "May 2025",
+    },
+    gamestashv2: {
+        id: "gamestashv2",
+        title: "Gamestash V2 - Enhanced Digital Asset Marketplace",
+        description:
+            "Next generation digital game asset store with improved features and performance",
+        longDescription:
+            "Gamestash V2 is the enhanced version of the original Gamestash platform, featuring improved architecture, better performance, and additional features for digital asset trading. Built with modern technologies and optimized for scalability.",
+        imageUrl: "/gamestashv2/image.png",
+        technologies: [
+            "TypeScript",
+            "React",
+            "Next.js",
+            "Tailwind CSS",
+            "PostgreSQL",
+        ],
+        liveUrl: "",
+        githubUrl: "https://github.com/Millosaurs/GamestashV2",
+        features: [
+            "Improved performance and scalability",
+            "Enhanced user interface",
+            "Advanced asset management system",
+            "Optimized database architecture",
+            "Better search and filtering capabilities",
+            "Modern tech stack for future scalability",
+        ],
+        date: "October 2025",
+        featured: true,
+    },
+    nexboard: {
+        id: "nexboard",
+        title: "NexBoard - Next.js Boilerplate Template",
+        description:
+            "A modern Next.js boilerplate template for rapid application development",
+        longDescription:
+            "NexBoard is a comprehensive Next.js boilerplate template that provides a solid foundation for building modern web applications. It comes pre-configured with essential tools and best practices, allowing developers to start projects quickly without the hassle of initial setup.",
+        imageUrl: "/Nexboard/image.png",
+        technologies: [
+            "TypeScript",
+            "React",
+            "Next.js",
+            "Tailwind CSS",
+            "Shadcn UI",
+            "Convex",
+        ],
+        liveUrl: "",
+        githubUrl: "https://github.com/Millosaurs/NexBoard",
+        features: [
+            "Pre-configured Next.js setup with TypeScript",
+            "Tailwind CSS and Shadcn UI integration",
+            "Convex backend ready to use",
+            "Best practices and folder structure",
+            "Authentication boilerplate",
+            "Responsive design system",
+            "Developer-friendly configuration",
+        ],
+        date: "August 2025",
+    },
+    "mc-webstore": {
+        id: "mc-webstore",
+        title: "MC Webstore - Minecraft Server Shop",
+        description: "A comprehensive webstore plugin for Minecraft servers",
+        longDescription:
+            "MC Webstore is a full-featured e-commerce solution for Minecraft servers, allowing server owners to sell in-game items, ranks, and services through a web interface. Built with Java and integrated with popular Minecraft server platforms.",
+        imageUrl: "/mc-webstore/image.png",
+        technologies: ["Java", "Spigot/Paper", "MySQL", "Maven"],
+        liveUrl: "",
+        githubUrl: "https://github.com/Millosaurs/mc-webstore",
+        features: [
+            "Secure payment processing integration",
+            "In-game item delivery system",
+            "Customizable shop interface",
+            "Player inventory management",
+            "Transaction history and analytics",
+            "Multi-server support",
+            "Admin dashboard for management",
+        ],
+        date: "August 2025",
+    },
+    prettylogs: {
+        id: "prettylogs",
+        title: "PrettyLogs - Beautiful Console Logging Library",
+        description:
+            "A TypeScript library for creating beautiful, formatted console logs",
+        longDescription:
+            "PrettyLogs is a lightweight TypeScript library that transforms ordinary console logs into beautifully formatted, color-coded messages. Perfect for debugging and development, it provides an intuitive API for creating visually appealing console output.",
+        imageUrl: "/prettylogs/image.png",
+        technologies: ["TypeScript", "Node.js", "NPM"],
+        liveUrl: "https://www.npmjs.com/package/prettylogs",
+        githubUrl: "https://github.com/Millosaurs/prettylogs",
+        features: [
+            "Beautiful color-coded console output",
+            "Simple and intuitive API",
+            "TypeScript support with full type definitions",
+            "Lightweight with zero dependencies",
+            "Customizable formatting options",
+            "Support for different log levels",
+            "Easy integration with existing projects",
+        ],
+        date: "October 2025",
+        featured: true,
+    },
+    "nithin-portfolio": {
+        id: "nithin-portfolio",
+        title: "Nithin's Portfolio - Personal Portfolio Website",
+        description:
+            "A modern and responsive portfolio website showcasing projects and skills",
+        longDescription:
+            "A professionally designed portfolio website built with modern web technologies. Features a clean, minimalist design with smooth animations and an intuitive user experience to showcase projects, skills, and achievements.",
+        imageUrl: "/nithin-portfolio/image.png",
+        technologies: [
+            "TypeScript",
+            "React",
+            "Next.js",
+            "Tailwind CSS",
+            "Framer Motion",
+        ],
+        liveUrl: "",
+        githubUrl: "https://github.com/Millosaurs/nithin-portfolio",
+        features: [
+            "Modern and responsive design",
+            "Smooth animations with Framer Motion",
+            "Project showcase section",
+            "Skills and experience display",
+            "Contact form integration",
+            "SEO optimized",
+            "Fast page load times",
+        ],
+        date: "October 2025",
+    },
 };
 
 export const projects = [
-  {
-    title: "ResQr - Resturant management application",
-    imageUrl: "/resqr/image.png",
-    link: "/projects/resqr",
-  },
-  {
-    title: "Gamestash - Digital Game Asset Store",
-    imageUrl: "/gamestash/image.png",
-    link: "/projects/gamestash",
-  },
-  {
-    title: "Achievement Tracker",
-    imageUrl: "/ArcHide/image.png",
-    link: "/projects/act",
-  },
-  {
-    title: "NoteBook-App",
-    creator: "Sharan Shrivatsav",
-    imageUrl: "/Orangy/image.png",
-    link: "/projects/notebook",
-  },
-  {
-    title: "Heroic Showcase",
-    imageUrl: "/heroic/image.png",
-    link: "/projects/heroic",
-  },
-  {
-    title: "Koala Hosting Landing Page",
-    imageUrl: "/koala-hosting/image.png",
-    link: "/projects/koala-hosting",
-  },
+    {
+        title: "PrettyLogs - Beautiful Console Logging Library",
+        imageUrl: "/prettylogs/image.png",
+        link: "/projects/prettylogs",
+        date: "October 2025",
+    },
+    {
+        title: "Nithin's Portfolio - Personal Portfolio Website",
+        imageUrl: "/nithin-portfolio/image.png",
+        link: "/projects/nithin-portfolio",
+        date: "October 2025",
+    },
+    {
+        title: "Gamestash V2 - Enhanced Digital Asset Marketplace",
+        imageUrl: "/gamestashv2/image.png",
+        link: "/projects/gamestashv2",
+        date: "October 2025",
+    },
+    {
+        title: "MC Webstore - Minecraft Server Shop",
+        imageUrl: "/mc-webstore/image.png",
+        link: "/projects/mc-webstore",
+        date: "August 2025",
+    },
+    {
+        title: "NexBoard - Next.js Boilerplate Template",
+        imageUrl: "/nexboard/image.png",
+        link: "/projects/nexboard",
+        date: "August 2025",
+    },
+    {
+        title: "ResQr - Resturant management application",
+        imageUrl: "/resqr/image.png",
+        link: "/projects/resqr",
+        date: "May 2025",
+    },
+    {
+        title: "Gamestash - Digital Game Asset Store",
+        imageUrl: "/gamestash/image.png",
+        link: "/projects/gamestash",
+        date: "July 2025",
+    },
+    {
+        title: "Achievement Tracker (UI Only)",
+        imageUrl: "/ArcHide/image.png",
+        link: "/projects/act",
+        date: "September 2023",
+    },
+    {
+        title: "NoteBook-App",
+        creator: "Sharan Shrivatsav",
+        imageUrl: "/Orangy/image.png",
+        link: "/projects/notebook",
+        date: "June 2023",
+    },
+    {
+        title: "Heroic Showcase",
+        imageUrl: "/heroic/image.png",
+        link: "/projects/heroic",
+        date: "May 2025",
+    },
+    {
+        title: "Koala Hosting Landing Page",
+        imageUrl: "/koala-hosting/image.png",
+        link: "/projects/koala-hosting",
+        date: "May 2025",
+    },
 ];
-
-
