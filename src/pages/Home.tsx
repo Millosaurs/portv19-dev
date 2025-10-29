@@ -3,6 +3,7 @@ import { ArrowRightIcon, Github, Mail, Linkedin } from "lucide-react";
 import { MdPlace } from "react-icons/md";
 import "../index.css";
 import { Link } from "react-router-dom";
+import Footer from "@/components/Footer";
 import {
     SiReact,
     SiNextdotjs,
@@ -497,15 +498,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            {/* Footer section */}
-            <div className="mt-16 md:mt-24 pt-6 mb-18 md:pt-8 border-t-2 border-background-card ">
-                <div className="flex flex-col md:flex-row justify-between items-center text-sm leading-2">
-                    <div className="mb-4 md:mb-0">
-                        Sharan Shrivatsav · ©2024
-                    </div>
-                    <div>Edited Times - 114</div>
-                </div>
-            </div>
+            <Footer />
         </div>
     );
 }

@@ -3,6 +3,7 @@ import { ArrowLeftIcon, ExternalLinkIcon, GithubIcon } from "lucide-react";
 import "../index.css";
 import { Link, useParams } from "react-router-dom";
 import { projectsData } from "@/assets/projects";
+import Footer from "@/components/Footer";
 
 export default function ProjectDetail() {
     const { projectId } = useParams<{ projectId: string }>();
@@ -142,15 +143,7 @@ export default function ProjectDetail() {
                 </div>
             </div>
 
-            {/* Footer section */}
-            <div className="mt-24 pt-8 border-t-2 border-background-card">
-                <div className="flex flex-col md:flex-row justify-between items-center text-sm">
-                    <div className="mb-4 md:mb-0">
-                        Sharan Shrivatsav · ©2024
-                    </div>
-                    <div>Edited Times - 114</div>
-                </div>
-            </div>
+            <Footer />
         </div>
     );
 }

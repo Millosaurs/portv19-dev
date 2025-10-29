@@ -18,6 +18,7 @@ import {
     useElements,
 } from "@stripe/react-stripe-js";
 import { storeItemsDetailed } from "@/assets/storeItems";
+import Footer from "@/components/Footer";
 
 // Initialize Stripe with your publishable key
 const stripePromise = loadStripe(
@@ -378,15 +379,7 @@ export default function StoreItemDetail() {
                     </div>
                 </div>
 
-                {/* Footer section */}
-                <div className="mt-16 md:mt-24 pt-6 border-t-2 border-background-card">
-                    <div className="flex flex-col md:flex-row justify-between items-center text-sm">
-                        <div className="mb-4 md:mb-0">
-                            Sharan Shrivatsav · ©2024
-                        </div>
-                        <div>Edited Times - 114</div>
-                    </div>
-                </div>
+                <Footer />
             </div>
         </div>
     );

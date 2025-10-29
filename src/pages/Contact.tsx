@@ -4,6 +4,7 @@ import { FaDiscord } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { Mail, MapPin, Clock, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Footer from "@/components/Footer";
 
 export default function Contact() {
     return (
@@ -248,15 +249,7 @@ export default function Contact() {
                     </div>
                 </div>
 
-                {/* Footer section */}
-                <div className="mt-16 md:mt-24 pt-6 mb-18 md:pt-8 border-t-2 border-background-card ">
-                    <div className="flex flex-col md:flex-row justify-between items-center text-sm leading-2">
-                        <div className="mb-4 md:mb-0">
-                            Sharan Shrivatsav · ©2024
-                        </div>
-                        <div>Edited Times - 114</div>
-                    </div>
-                </div>
+                <Footer />
             </div>
         </div>
     );
