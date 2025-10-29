@@ -194,7 +194,7 @@ export const projectsData: Record<string, ProjectData> = {
             "Tailwind CSS",
             "PostgreSQL",
         ],
-        liveUrl: "",
+        liveUrl: "https://dev.gamestash.net",
         githubUrl: "https://github.com/Millosaurs/GamestashV2",
         features: [
             "Improved performance and scalability",
@@ -223,7 +223,7 @@ export const projectsData: Record<string, ProjectData> = {
             "Shadcn UI",
             "Convex",
         ],
-        liveUrl: "",
+        liveUrl: "https://nexboard.shrivatsav.dev",
         githubUrl: "https://github.com/Millosaurs/NexBoard",
         features: [
             "Pre-configured Next.js setup with TypeScript",
@@ -244,7 +244,7 @@ export const projectsData: Record<string, ProjectData> = {
             "MC Webstore is a full-featured e-commerce solution for Minecraft servers, allowing server owners to sell in-game items, ranks, and services through a web interface. Built with Java and integrated with popular Minecraft server platforms.",
         imageUrl: "/mc-webstore/image.png",
         technologies: ["Java", "Spigot/Paper", "MySQL", "Maven"],
-        liveUrl: "",
+        liveUrl: "https://store.gamestash.net",
         githubUrl: "https://github.com/Millosaurs/mc-webstore",
         features: [
             "Secure payment processing integration",
@@ -295,7 +295,7 @@ export const projectsData: Record<string, ProjectData> = {
             "Tailwind CSS",
             "Framer Motion",
         ],
-        liveUrl: "",
+        liveUrl: "https://visolex.vercel.app",
         githubUrl: "https://github.com/Millosaurs/nithin-portfolio",
         features: [
             "Modern and responsive design",
@@ -337,7 +337,7 @@ export const projects = [
     },
     {
         title: "NexBoard - Next.js Boilerplate Template",
-        imageUrl: "/nexboard/image.png",
+        imageUrl: "/Nexboard/image.png",
         link: "/projects/nexboard",
         date: "August 2025",
     },

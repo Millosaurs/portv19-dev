@@ -38,7 +38,7 @@ const Sidebar = () => {
 
     // Mobile header
     const MobileHeader = () => (
-        <header className="fixed top-0 left-0 right-0 h-16 bg-background-main/95 backdrop-blur-sm border-b border-background-card flex items-center justify-between px-4 gap-y-4 z-50">
+        <header className="fixed top-0 left-0 right-0 h-16 bg-background-main/95 backdrop-blur-sm  flex items-center justify-between px-4 gap-y-4 z-50">
             <div className="flex items-center">
                 <Link
                     to="/"
@@ -59,7 +59,7 @@ const Sidebar = () => {
 
     // Desktop sidebar
     const DesktopSidebar = () => (
-        <aside className="h-screen w-[280px] min-w-[280px] flex-shrink-0 hidden md:block border-r border-background-card">
+        <aside className="h-screen w-[280px] min-w-[280px] flex-shrink-0 hidden md:block ">
             <nav className="h-full flex flex-col items-center py-8 px-4">
                 <div className="w-full mb-8">
                     <div className="flex flex-col items-center justify-center">
