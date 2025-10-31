@@ -266,7 +266,7 @@ export const projectsData: Record<string, ProjectData> = {
             "PrettyLogs is a lightweight TypeScript library that transforms ordinary console logs into beautifully formatted, color-coded messages. Perfect for debugging and development, it provides an intuitive API for creating visually appealing console output.",
         imageUrl: "/prettylogs/image.png",
         technologies: ["TypeScript", "Node.js", "NPM"],
-        liveUrl: "https://www.npmjs.com/package/prettylogs",
+        liveUrl: "https://prettylogs.shrivatsav.dev",
         githubUrl: "https://github.com/Millosaurs/prettylogs",
         features: [
             "Beautiful color-coded console output",
